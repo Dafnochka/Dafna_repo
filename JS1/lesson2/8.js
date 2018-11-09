@@ -1,10 +1,13 @@
-let val = +prompt("Введите число");
-let pow = +prompt("Введите степень");
-let i=0;
+const val1 = +prompt("Введите число");
+const pow1 = +prompt("Введите степень");
+let result=1;
 function power(val,pow) {
 
-    if(i<=pow){
-        let result= 1*
+    if (pow==0) {
+        alert(result);
+        return;
     }
-
+    result *= val;
+    power(val, pow-1);
 }
+power(val1,pow1);
