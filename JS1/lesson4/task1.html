@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Гукетлева - дз4</title>
+</head>
+<body>
+<script>
+    let num=prompt("Введите число от 0 до 999");
+    const result = {};
+    const length=num.length;
+function selection(n) {
+    n = n.split('');
+    result["Единицы"] = n.pop();
+    if (length > 1) {
+        result["Десятки"] = n.pop();
+    }
+    if (length > 2) {
+        result["Сотни"] = n.pop();
+    }
+
+    console.log(result);
+    alert(result);
+}
+    if(length>3 || isNaN(+num)){
+        console.log("Неверный ввод");
+        alert("Неверный ввод");
+        alert(result);
+    }
+
+    else {
+        selection(num);
+    }
+</script>
+
+</body>
+</html>
