@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Guketleva - hw1</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+<div id="task1">
+    <h3>Задание 1.</h3>
+    <p>Написать функцию loop, которая будет принимать параметры: times (значение по умолчанию = 0),
+        callback (значение по умолчанию = null) и будет в цикле (times раз), вызывать функцию callback.
+        Если функцию не передана, то цикл не должен отрабатывать ни разу. Покажите применение этой функции.</p>
+    <div class="input">
+        times <input class="times" type="text" value="0">
+        callback <input class="callback" type="text" value=null>
+    <button>Запустить</button>
+    </div>
+    <div class="result"></div>
+</div>
+
+<div id="task2">
+    <h3>Задание 2.</h3>
+    <p>Написать функцию calculateArea, которая будет принимать параметры, для вычисления площади
+        (можете выбрать какую то конкретную фигуру, а можете, основываясь на переданных параметрах,
+        выполнять требуемый алгоритм вычисления площади для переданной в параметрах фигуры)
+        и возвращать объект вида: { area, figure, input }, где area - вычисленная площадь,
+        figure - название фигуры, для которой вычислялась площадь, input - входные параметры,
+        по которым было произведено вычисление.</p>
+    <div class="input">
+        <label for="figure">Выберите фигуру</label>
+        <select name="figure" id="figure">
+            <option>Квадрат</option>
+            <option>Прямоугольник</option>
+            <option selected="selected">Круг</option>
+            <option>Треугольник</option>
+        </select>
+        <span class="parametr1">Радиус</span>
+        <input class="parametr1" id="parametr1" type="text" value="1">
+        <span class="parametr2" style="display: none">Параметр2</span>
+        <input class="parametr2" id="parametr2" style="display: none" type="text" value="1">
+        <button>Запустить</button>
+    </div>
+    <div class="result"></div>
+</div>
+
+<div id="task3">
+    <h3>Задание 4.</h3>
+    <p>Необходимо написать иерархию классов вида:
+        Human -> Employee -> Developer
+        Human -> Employee -> Manager
+        Каждый Менеджер (Manager) должен иметь внутренний массив своих сотрудников (разработчиков),
+        а также методы по удалению/добавлению разработчиков.
+        Каждый Разработчик (Developer) должны иметь ссылку на Менеджера и методы для изменения менеджера
+        (имеется ввиду возможность назначить другого менеджера).
+        У класса Human должны быть следующие параметры: name (строка), age (число), dateOfBirth (строка или дата)
+        У класса Employee должны присутствовать параметры: salary (число), department (строка)
+        В классе Human должен присутствовать метод displayInfo, который возвращает строку
+        со всеми параметрами экземпляра Human.
+        В классе Employee должен быть реализовать такой же метод (displayInfo), который вызывает
+        базовый метод и дополняет его параметрами из экземпляра Employee
+        Чтобы вызвать метод базового класса, необходимо внутри вызова метода displayInfo класса
+        Employee написать: super.displayInfo(), это вызовет метод disaplyInfo класс Human и вернет
+        строку с параметрами Human'a.</p>
+    <div class="result">Выполнеено в файле task3.js</div>
+
+</div>
+
+<div id="task4">
+    <h3>Задание 4.</h3>
+    <p>При помощи генератора написать функцию - анкету, которая запрашивает у
+        пользователя на ввод параметры и передаёт их в генератор. В конце, когда
+        генератор завершается, он должен вернуть все введённые входные параметры
+        в виде объекта. Этот объект нужно вывести в консоли.</p>
+    <div class="input">
+        <span class="field"></span>
+        <input class="field" id="field" type="text">
+        <button>Отправить</button>
+    </div>
+
+    <div class="result">Результат будет выведен в консоль</div>
+
+</div>
+
+
+
+</div>
+
+
+
+<!--jQwery-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script src="./scripts/task1.js"></script>
+<script src="./scripts/task2.js"></script>
+<!--<script src="./scripts/task4.js"></script>-->
+
+
+</body>
+</html>
